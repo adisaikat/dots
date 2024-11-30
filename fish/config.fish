@@ -22,7 +22,6 @@ alias pamcan=pacman
 alias in='yay -S'
 alias un='yay -R'
 alias up='yay -Syuu'
-alias neofetch='neofetch --ascii_distro arch'
 alias lvim='/home/adisaikat/.local/bin/lvim'
 
 # function fish_prompt

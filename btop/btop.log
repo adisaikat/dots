@@ -38,3 +38,15 @@ Use --utf-force argument to force start if you're sure your terminal can handle 
 2024/11/28 (16:46:02) | ===> btop++ v.1.4.0
 2024/11/28 (16:46:02) | WARNING: No UTF-8 locale detected! Forcing start with --utf-force argument.
 2024/11/28 (16:46:02) | WARNING: Intel GPU: Failed to initialize PMU
+
+2024/11/30 (17:20:21) | ===> btop++ v.1.4.0
+2024/11/30 (17:20:21) | ERROR: No UTF-8 locale detected!
+Use --utf-force argument to force start if you're sure your terminal can handle it.
+
+2024/11/30 (17:20:24) | ===> btop++ v.1.4.0
+2024/11/30 (17:20:24) | WARNING: No UTF-8 locale detected! Forcing start with --utf-force argument.
+2024/11/30 (17:20:24) | WARNING: Intel GPU: Failed to initialize PMU
+
+2024/11/30 (22:29:52) | ===> btop++ v.1.4.0
+2024/11/30 (22:29:52) | WARNING: No UTF-8 locale detected! Forcing start with --utf-force argument.
+2024/11/30 (22:29:52) | WARNING: Intel GPU: Failed to initialize PMU
