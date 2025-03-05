@@ -10,7 +10,7 @@
 @import "theme.css";
 
 window#waybar {
-    background: @bar-bg;
+    background: @main-bg;
 }
 
 tooltip {
@@ -97,13 +97,17 @@ tooltip {
 #backlight,
 #battery,
 #bluetooth,
-#custom-cava,
+#cava,
 #custom-cliphist,
+#clock,
 #clock,
 #custom-cpuinfo,
 #cpu,
+#custom-display,
+#custom-github_hyde,
 #custom-github_hyprdots,
 #custom-gpuinfo,
+#custom-hyprsunset,
 #idle_inhibitor,
 #custom-keybindhint,
 #language,
@@ -114,14 +118,20 @@ tooltip {
 #custom-power,
 #privacy,
 #pulseaudio,
+#custom-sensorsinfo,
 #custom-spotify,
 #taskbar,
+#taskbar,
+#taskbar#windows,
 #custom-theme,
 #tray,
 #custom-updates,
 #custom-wallchange,
 #custom-wbar,
+#custom-weather,
 #window,
+#workspaces,
+#workspaces,
 #workspaces,
 #custom-l_end,
 #custom-r_end,

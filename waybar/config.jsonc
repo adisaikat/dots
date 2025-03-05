@@ -5,7 +5,7 @@
 
     "layer": "top",
     "output": [ "*" ],
-    "position": "top",
+    "position": "bottom",
     "mod": "dock",
     "height": 40,
     "exclusive": true,
@@ -16,9 +16,9 @@
 
 // positions generated based on config.ctl //
 
-	"modules-left": ["custom/padd","custom/l_end","cpu","memory","custom/cpuinfo","custom/r_end","custom/l_end","hyprland/workspaces","custom/r_endcustom/l_end","custom/spotify","custom/r_end","custom/padd"],
+	"modules-left": ["custom/padd","cpu","memory","custom/cpuinfo","custom/gpuinfo","custom/l_end","hyprland/workspaces","custom/r_end","cava","custom/padd"],
 	"modules-center": ["custom/padd","custom/l_end","idle_inhibitor","clock","custom/r_end","custom/padd"],
-	"modules-right": ["custom/padd","custom/l_end","backlight","network","pulseaudio","pulseaudio#microphone","custom/updates","custom/keybindhint","custom/r_end","custom/l_end","privacy","tray","battery","custom/r_end","custom/l_end","custom/wallchange","custom/theme","custom/wbar","custom/cliphist","custom/power","custom/r_endcustom/l_end","hyprland/window","custom/r_end","custom/padd"],
+	"modules-right": ["custom/padd","custom/l_end","backlight","network","pulseaudio","pulseaudio#microphone","custom/updates","custom/keybindhint","custom/r_end","privacy","tray","battery","custom/r_end","custom/wallchange","custom/theme","custom/wbar","custom/cliphist","custom/power","hyprland/window","custom/padd"],
 
 
 // sourced from modules based on config.ctl //
@@ -59,6 +59,47 @@
         "max-length": 1000
     },
 
+    "custom/gpuinfo": {
+        "exec": "NO_EMOJI=1 gpuinfo.sh",
+        "return-type": "json",
+        "format": "{}",
+        "rotate": 0,
+        "interval": 5, // once every 5 seconds
+        "tooltip": true,
+        "max-length": 1000,
+        "on-click": "gpuinfo.sh --toggle",
+    },
+
+    "custom/gpuinfo#nvidia": {
+        "exec": "NO_EMOJI=1 gpuinfo.sh --use nvidia ",
+        "return-type": "json",
+        "format": "{}",
+        "rotate": 0,
+        "interval": 5, // once every 5 seconds
+        "tooltip": true,
+        "max-length": 1000,
+    },
+
+    "custom/gpuinfo#amd": {
+        "exec": "NO_EMOJI=1 gpuinfo.sh --use amd ",
+        "return-type": "json",
+        "format": "{}",
+        "rotate": 0,
+        "interval": 5, // once every 5 seconds
+        "tooltip": true,
+        "max-length": 1000,
+    },
+
+    "custom/gpuinfo#intel": {
+        "exec": "NO_EMOJI=1 gpuinfo.sh --use intel ",
+        "return-type": "json",
+        "format": "{}",
+        "rotate": 0,
+        "interval": 5, // once every 5 seconds
+        "tooltip": true,
+        "max-length": 1000,
+    },
+
     "hyprland/workspaces": {
         "disable-scroll": true,
         "rotate": 0,
@@ -72,21 +113,35 @@
         }
     },
 
-    "custom/spotify": {
-        "exec": "mediaplayer.py",
-        "format": "{}",
-        "rotate": 0,
-        "return-type": "json",
-        "on-click": "playerctl play-pause",
-        "on-click-right": "playerctl next",
-        "on-click-middle": "playerctl previous",
-        "on-scroll-up": "volumecontrol.sh -p i",
-        "on-scroll-down": "volumecontrol.sh -p d",
-        "max-length": 25,
-        "escape": true,
-        "tooltip": true
-    },
-
+  "cava": {
+    "framerate": 60,
+    "autosens": 40,
+    "bars": 35,
+    "lower_cutoff_freq": 50,
+    "higher_cutoff_freq": 14000,
+    "method": "pulse",
+    "source": "auto",
+    "stereo": true,
+    "reverse": false,
+    "bar_delimiter": 0,
+    "monstercat": true,
+    "waves": true,
+    "hide_on_silence": true,
+    "noise_reduction": 0.33,
+    "input_delay": 0,
+    "icon-size": 25,
+    "format-icons": [
+      "▁",
+      "▂",
+      "▃",
+      "▄",
+      "▅",
+      "▆",
+      "▇",
+      "█"
+    ],
+    "on-click": "playerctl play-pause",
+  },
     "idle_inhibitor": {
         "format": "{icon}",
         "rotate": 0,
@@ -295,7 +350,7 @@
         "rotate": 0,
         "separate-outputs": true,
         "rewrite": {
-            "(.*)adisaikat@saikat-tb9:(.*)": "$1  :$2",
+            "(.*)adisaikat@neon:(.*)": "$1  :$2",
             "(.*) — Mozilla Firefox": "$1 󰈹",
             "(.*)Mozilla Firefox": "$1 Firefox 󰈹",
             "(.*) - Visual Studio Code": "$1 󰨞",
